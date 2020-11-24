@@ -1,12 +1,15 @@
 <p class="notice">
-    <%= notice %>
+  <%= notice %>
 </p>
 
-<h4>Title:</h4>
-<p><%= @book.title %></p>
+ <p>
+ <Strong>Title: </Strong><%= @book.title %>
+ </p>
 
-<h4>Body:</h4>
-<p><%= @book.body %></p>
+ <p>
+ <strong>Body: </strong><%= @book.body %>
+ </p>
 
-<%= link_to "Edit", edit_book_path(@book) %>
-<%= link_to "Back", :back %>
+ <%= link_to "Edit", edit_book_path(@book), class: "link" %>
+ <span> | </span>
+ <%= link_to "Back", books_path, class: "link" %>

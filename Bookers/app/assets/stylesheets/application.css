@@ -14,34 +14,22 @@
  *= require_self
  */
 
+/*全体*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*Topページ*/
-
-.top {
-  margin: 33px;
-  background-color: #fff;
-  color: #333;
-  font-family: verdane, arial, helevetica, sans-serif;
-  line-height: 18px
-}
-.heading {
-  margin:20px 0;
-  display: block;
-  font-size: 2em;
-
-  font-weight: bold;
-}
-
-.top-text {
+p {
   margin: 33px;
 }
-/*index.html*/
-.index {
+
+.link {
+  color: black;
+}
+
+body {
   margin: 33px;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -49,20 +37,31 @@
   line-height: 18px;
 }
 
-.index-title {
+h4 {
+  font-weight: normal;
+}
+/*Topページ*/
+
+.heading {
+  margin:20px 0;
+  display: block;
+  font-size: 2em;
   font-weight: bold;
-  margin: 17px;
 }
 
-.
+/*index.html*/
+.title {
+  font-weight: bold;
+  margin: 17px 0px;
+}
 
 .title-name {
   text-align: center;
-  padding: 1px 7px 5px;
+  padding: 1px 5px 7px 5px;
 }
 
 .value {
-  padding: 1px 7px 5px;
+  padding: 1px 5px 7px 5px;
 }
 
 .index-title2 {
@@ -72,9 +71,15 @@
 .field {
   margin-bottom: 10px;
   display: block;
+  color: black;
 }
 
 .action {
   display: block;
   margin-bottom: 10px;
+  color: black;
 }
+
+/*詳細ページ(show)*/
+
+
