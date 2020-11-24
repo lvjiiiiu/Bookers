@@ -1,0 +1,12 @@
+<p class="notice">
+    <%= notice %>
+</p>
+
+<h4>Title:</h4>
+<p><%= @book.title %></p>
+
+<h4>Body:</h4>
+<p><%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book) %>
+<%= link_to "Back", :back %>
