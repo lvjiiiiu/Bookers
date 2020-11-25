@@ -40,6 +40,10 @@ body {
 h4 {
   font-weight: normal;
 }
+
+.notice {
+  color: green;
+}
 /*Topページ*/
 
 .heading {
@@ -80,6 +84,12 @@ h4 {
   color: black;
 }
 
-/*詳細ページ(show)*/
+/*エラー文*/
+.error_explanation {
+  margin: 30px;
+  color: red;
+}
 
-
+.error_explanation > h2 {
+  margin: 20px;
+}
