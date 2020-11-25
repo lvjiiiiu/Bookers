@@ -44,21 +44,14 @@ h4 {
 .notice {
   color: green;
 }
-/*Topページ*/
 
-.heading {
-  margin:20px 0;
-  display: block;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-/*index.html*/
+/*index.html(共通)*/
 .title {
-  font-weight: bold;
   margin: 17px 0px;
 }
 
+
+/*index.html(一覧)*/
 .title-name {
   text-align: center;
   padding: 1px 5px 7px 5px;
@@ -68,10 +61,7 @@ h4 {
   padding: 1px 5px 7px 5px;
 }
 
-.index-title2 {
-  margin: 16px 0;
-}
-
+/*index.html(投稿＆編集)*/
 .field {
   margin-bottom: 10px;
   display: block;

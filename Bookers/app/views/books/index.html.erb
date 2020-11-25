@@ -1,13 +1,9 @@
-
-
-<div class=index>
-
+<!-----------------------一覧------------------------->
 <p class="notice"><%= notice %></p>
 
 <h1 class=title>Books</h1>
 
-  <table class=index-table>
-
+  <table>
     <tr class=title>
       <th class=title-name>title</th>
       <th class=title-name>Body</th>
@@ -16,7 +12,7 @@
       <th class=title-name></th>
     </tr>
 
-  <% @books.each do |book| %>
+    <% @books.each do |book| %>
     <tr class=recode>
       <td class=value><%= book.title %></td>
       <td class=value><%= book.body %></td>
@@ -24,15 +20,16 @@
       <td class=value><%= link_to "Edit", edit_book_path(book) ,class: "link"%></td>
       <td class=value><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?", class: "link"%></td>
     </tr>
-  <% end %>
+    <% end %>
   </table>
 
-<!------------------------------------------------>
+<!-----------------------投稿------------------------->
 
-<h2 class=index-title2>New book</h2>
+<h2 class=title>New book</h2>
+
 <%= form_with model: @book, local:true do |f| %>
 
-<% if @book.errors.any? %>
+  <% if @book.errors.any? %>
     <div class="error_explanation">
        <h2><%= pluralize(@book.errors.count, "error") %> prohibited this product from being saved:</h2>
       <ul>
@@ -43,18 +40,16 @@
     </div>
   <% end %>
 
-
-<div class=field>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-</div>
-<div class=field>
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-</div>
-<div class=action>
- <%= f.submit "Create Book" %>
-</div>
+  <div class=field>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+  </div>
+  <div class=field>
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+  </div>
+  <div class=action>
+   <%= f.submit "Create Book" %>
+  </div>
+  
 <% end %>
-
-</div>
