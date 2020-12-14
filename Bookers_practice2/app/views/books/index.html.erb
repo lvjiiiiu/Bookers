@@ -1,37 +1,44 @@
+<%= notice %>
+
 <h1>Books</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-  <tr>
     <% @books.each do |book|  %>
-    <td><%= book.title %></td>
-    <td><%= book.body %></td>
-    <td><%= link_to "show", book_path(book.id) %></td>
-    <td><%= link_to "edit", edit_book_path(book.id) %></td>
-    <td><%= link_to "destroy", book_path(book.id), method: :delete %></td>
-  </tr>
-  <% end %>
-</table>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <td><%= link_to "show", book_path(book.id) %></td>
+      <td><%= link_to "edit", edit_book_path(book.id) %></td>
+      <td><%= link_to "destroy", book_path(book.id), method: :delete %></td>
+    </tr>
+    <% end %>
+  </table>
 
-<h2>NEW book</h2>
-<% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました
-  <% @book.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
-<% end %>
+  <h2>NEW book</h2>
+    <% if @book.errors.any? %>
+    <h2><%= pluralize(@book.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
 
-<%= form_with model: @book, local:true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-  <%= f.submit "Create Book" %>
-<% end %>
+  <%= form_with model: @book, local:true do |f| %>
+    <h4>Title</h4>
+      <%= f.text_field :title %>
+    <h4>Body</h4>
+      <%= f.text_area :body %>
+    <div>
+      <%= f.submit "Create Book" %>
+    </div>
+
+  <% end %>
